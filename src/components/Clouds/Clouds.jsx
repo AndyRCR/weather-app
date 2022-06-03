@@ -28,8 +28,8 @@ const Clouds = () => {
             max: 100
         },
         meta: {
-            humidity: {
-                alias: 'Nubes',
+            clouds: {
+                alias: 'Clouds',
                 formatter: (e) => `${e}%`
             }
         },

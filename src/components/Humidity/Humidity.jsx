@@ -30,7 +30,7 @@ const Humidity = () => {
     },
     meta: {
       humidity: {
-        alias: 'Humedad',
+        alias: 'Humidity',
         formatter: (e) => `${e}%`
       }
     },

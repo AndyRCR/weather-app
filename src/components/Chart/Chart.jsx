@@ -16,11 +16,11 @@ const Chart = () => {
     yField: ['averageDay', 'averageNight'],
     meta: {
       averageDay: {
-        alias: 'Temp. promedio diurna',
+        alias: 'Average day temperature',
         formatter: (v) => `${v} C°`
       },
       averageNight: {
-        alias: 'Temp. promedio nocturna',
+        alias: 'Average night temperature',
         formatter: (v) => `${v} C°`
       }
     },

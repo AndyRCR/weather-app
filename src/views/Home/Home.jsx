@@ -16,7 +16,7 @@ const Home = () => {
   
   return (
     <div className='homeContainer'>
-        <h1 style={{color: 'white'}}>Administrador de pronóstico climático</h1>
+        <h1 style={{color: 'white'}}>Weather Forecast Manager</h1>
         <div className='contentContainer'>
           <div className='firstContainer'>
             <Form/>

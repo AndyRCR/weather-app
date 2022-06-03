@@ -51,7 +51,7 @@ const Form = () => {
       }else{
         const col = collection(db, 'districts')
         await addDoc(col, formValue)
-        toast.success('Registro ingresado!', {
+        toast.success('Registration entered successfully!', {
           position: "top-right",
           autoClose: 2000,
           hideProgressBar: false,
@@ -126,7 +126,7 @@ const Form = () => {
             <LocalizationProvider dateAdapter={AdapterDateFns}>
               <DatePicker
                 inputFormat='dd/MM/yyyy'
-                label="Fecha"
+                label="Date"
                 value={formValue.date}
                 onChange={(e) => {
                   try {
