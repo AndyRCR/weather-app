@@ -1,0 +1,14 @@
+.cloudsContainer{
+    text-align: center;
+    margin: 0 30px 30px 30px;
+    padding: 20px 0;
+    height: 50%;
+    background-color: white;
+    border-radius: 30px;
+}
+
+.cloudsContainer .cloudsCharts{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}

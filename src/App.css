@@ -1,38 +1,97 @@
-.App {
-  text-align: center;
+.app {
+  height: 100vh;
+  padding: 20px;
+  background: linear-gradient(to bottom, #2980b9, #6dd5fa, #ffffff);
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1{
+	font-size: 25px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h2{
+  margin-top: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.cloud {
+	width: 200px;
+	background: #fff;
+	border-radius: 200px;
+	position: relative; 
+  z-index: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.cloud:before, .cloud:after {
+	content: '';
+	position: absolute; 
+	background: #fff;
+	width: 100px; height: 80px;
+	position: absolute; top: 200px; left: 10px;
+	border-radius: 100px;
+	transform: rotate(30deg);
+  z-index: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cloud:after {
+	width: 120px; height: 120px;
+	top: 175px; left: auto; right: 15px;
+  z-index: 0;
+}
+
+.x1 {
+  animation: moveclouds 30s linear infinite;
+}
+
+.x2 {
+	left: 200px;
+	transform: scale(0.6);
+	opacity: 0.6;
+  animation: moveclouds 25s linear infinite;
+}
+
+.x3 {
+	left: -250px; top: 450px;
+	transform: scale(0.8);
+	opacity: 0.8;
+  animation: moveclouds 20s linear infinite;
+}
+
+.x4 {
+	left: 470px; top: -250px;
+	transform: scale(0.75);
+	opacity: 0.75;
+  animation: moveclouds 18s linear infinite;
+}
+
+.x5 {
+	left: -600px; top: 150px;
+	transform: scale(0.8);
+	opacity: 0.8;
+  animation: moveclouds 20s linear infinite;
+}
+
+.x6 {
+	left: -500px; top: 400px;
+	transform: scale(0.8);
+	opacity: 0.8;
+  animation: moveclouds 30s linear infinite;
+}
+
+.x7 {
+	left: -600px; top: 350px;
+	transform: scale(0.8);
+	opacity: 0.8;
+  animation: moveclouds 35s linear infinite;
+}
+
+.x8 {
+	left: -150px; top: 0px;
+	transform: scale(4);
+	opacity: 0.8;
+  animation: moveclouds 20s linear infinite;
+}
+
+@keyframes moveclouds {
+  0% {margin-left: -1000px;}
+	100% {margin-left: 2000px;}
 }

@@ -1,0 +1,21 @@
+.homeContainer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 40px;
+    z-index: 10;
+}
+
+.homeContainer .contentContainer{
+    display: flex;
+}
+
+.homeContainer .firstContainer,
+.homeContainer .secondContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.homeContainer .firstContainer{width: 40%;}
+.homeContainer .secondContainer{width: 60%;}
