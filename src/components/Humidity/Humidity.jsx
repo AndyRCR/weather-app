@@ -52,7 +52,7 @@ const Humidity = () => {
 
   return (
     <div className='humidityContainer'>
-      <h2>Average Humidity</h2>
+      <h2>Average Humidity per Day</h2>
       <div className='humidityCharts'>
         {list != null ? (
           <>

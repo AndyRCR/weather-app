@@ -51,7 +51,7 @@ const Clouds = () => {
 
     return (
         <div className='cloudsContainer'>
-            <h2>Average Cloud level</h2>
+            <h2>Average Cloud Level per Day</h2>
             <div className='cloudsCharts'>
                 {list != null ? (
                     <>

@@ -127,6 +127,7 @@ const Form = () => {
               <DatePicker
                 inputFormat='dd/MM/yyyy'
                 label="Date"
+                minDate={new Date(Date.now())}
                 value={formValue.date}
                 onChange={(e) => {
                   try {
