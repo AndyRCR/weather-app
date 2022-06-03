@@ -12,8 +12,6 @@ import './Form.css'
 
 const Form = () => {
 
-  const randomRange = (min, max) => { return Math.floor(Math.random() * (max - min + 1)) + min }
-
   const { getData, district, setDistrict } = useContext(GlobalContext)
 
   const [formValue, setFormValue] = useState({

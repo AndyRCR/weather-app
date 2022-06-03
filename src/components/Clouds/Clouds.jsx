@@ -1,11 +1,11 @@
 import { Line, Liquid } from '@ant-design/charts'
-import { Button } from '@mui/material'
+import { Button, CircularProgress } from '@mui/material'
 import React, { useContext, useEffect, useState } from 'react'
 import { GlobalContext } from '../../context/GlobalStateContext'
 import './Clouds.css'
 
 const Clouds = () => {
-    const { list, district } = useContext(GlobalContext)
+    const { list } = useContext(GlobalContext)
     const [cloudsAvg, setCloudsAvg] = useState(null)
 
     const configLiquid = {
@@ -46,20 +46,20 @@ const Clouds = () => {
     const downloadImage = () => chart?.downloadImage()
 
     useEffect(() => {
-        if (list != null) {
-            let copy = [...list]
-            if(copy.length > 0) setCloudsAvg(copy.map(e => e.clouds).reduce((a, b) => a + b) / copy.length)
-        }
-    }, [district])
+        if (list != null) setCloudsAvg(list.map(e => e.clouds).reduce((a, b) => a + b) / list.length)
+    }, [list])
 
     return (
         <div className='cloudsContainer'>
             <h2>Average Cloud level</h2>
             <div className='cloudsCharts'>
                 {list != null ? (
-                    <Line data={list} {...configChart} onReady={(chartInstance) => (chart = chartInstance)}/>
-                ) : <h1>Sin registros</h1>}
-                <Liquid percent={cloudsAvg / 100} {...configLiquid}></Liquid>
+                    <>
+                        <Line data={list} {...configChart} onReady={(chartInstance) => (chart = chartInstance)} />
+                        <Liquid percent={cloudsAvg / 100} {...configLiquid}></Liquid>
+                    </>
+                ) : <CircularProgress />}
+                
             </div>
             <Button variant='outlined' onClick={downloadImage}>
                 Export Image

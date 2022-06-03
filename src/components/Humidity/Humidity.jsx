@@ -1,22 +1,22 @@
 import { Line, Liquid } from '@ant-design/charts'
-import { Button } from '@mui/material'
+import { Button, CircularProgress } from '@mui/material'
 import React, { useContext, useEffect, useState } from 'react'
 import { GlobalContext } from '../../context/GlobalStateContext'
 import './Humidity.css'
 
 const Humidity = () => {
 
-  const {list, district} = useContext(GlobalContext)
+  const { list } = useContext(GlobalContext)
   const [humidityAvg, setHumidityAvg] = useState(null)
 
   const configLiquid = {
-      outline: {
-        border: 4,
-        distance: 8,
-      },
-      wave: {
-        length: 128,
-      },
+    outline: {
+      border: 4,
+      distance: 8,
+    },
+    wave: {
+      length: 128,
+    },
   }
 
   const configChart = {
@@ -47,24 +47,23 @@ const Humidity = () => {
   const downloadImage = () => chart?.downloadImage()
 
   useEffect(() => {
-    if(list != null){
-      let copy = [...list]
-      if(copy.length > 0) setHumidityAvg(copy.map(e => e.humidity).reduce((a,b)=>a+b) / copy.length)
-    }
-  }, [district])
+    if (list != null) setHumidityAvg(list.map(e => e.humidity).reduce((a, b) => a + b) / list.length)
+  }, [list])
 
   return (
     <div className='humidityContainer'>
-        <h2>Average Humidity</h2>
-        <div className='humidityCharts'>
-          {list != null ? (
+      <h2>Average Humidity</h2>
+      <div className='humidityCharts'>
+        {list != null ? (
+          <>
             <Line data={list} {...configChart} onReady={(chartInstance) => (chart = chartInstance)} />
-          ) : <h1>Sin registros</h1>}
-          <Liquid percent={humidityAvg/100} {...configLiquid}></Liquid>
-        </div>
-        <Button variant='outlined' onClick={downloadImage}>
-          Export Image
-        </Button>
+            <Liquid percent={humidityAvg / 100} {...configLiquid}></Liquid>
+          </> 
+        ) : <CircularProgress />}
+      </div>
+      <Button variant='outlined' onClick={downloadImage}>
+        Export Image
+      </Button>
     </div>
   )
 }

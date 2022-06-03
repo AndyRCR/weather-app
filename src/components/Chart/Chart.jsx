@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from "react"
 import { DualAxes } from '@ant-design/charts'
 import { GlobalContext } from "../../context/GlobalStateContext"
 import './Chart.css'
-import { Button } from "@mui/material";
+import { Button, CircularProgress } from "@mui/material";
 
 const Chart = () => {
 
@@ -62,7 +62,9 @@ const Chart = () => {
       <div style={{paddingBottom: '20px'}}>
         {list != null ? (
           <DualAxes data={[list, list]} {...config} onReady={(chartInstance) => (chart = chartInstance)} />
-        ) : <h1>Sin registros</h1>}
+        ) : (
+          <CircularProgress />
+        )}
       </div>
       <Button variant='outlined' onClick={downloadImage}>
         Export Image
