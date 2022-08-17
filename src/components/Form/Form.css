@@ -35,3 +35,15 @@
     width: 40%;
     margin: 20px auto;
 }
+
+@media (max-width: 1800px){
+    .formContainer{
+        width: 50%;
+    }
+}
+
+@media (max-width: 1300px){
+    .formContainer{
+        width: 100%;
+    }
+}

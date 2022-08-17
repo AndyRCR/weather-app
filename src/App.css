@@ -95,3 +95,19 @@ h2{
   0% {margin-left: -1000px;}
 	100% {margin-left: 2000px;}
 }
+
+@media (max-width: 1800px){
+    .app{
+		overflow: auto;
+	}
+}
+
+@media (max-width: 700px){
+	h1{
+		font-size: 20px;
+	}
+
+    h2{
+		font-size: 18px;
+	}
+}

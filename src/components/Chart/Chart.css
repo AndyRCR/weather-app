@@ -9,3 +9,19 @@
     padding: 20px 0;
     border-radius: 30px;
 }
+
+@media (max-width: 1800px){
+    .chartContainer{
+        width: 50%;
+    }
+}
+
+@media (max-width: 1300px){
+    .chartContainer{
+        width: 100%;
+    }
+
+    .chartContainer canvas{
+        width: 80% !important;
+    }
+}

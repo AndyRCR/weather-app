@@ -19,3 +19,27 @@
 
 .homeContainer .firstContainer{width: 40%;}
 .homeContainer .secondContainer{width: 60%;}
+
+@media (max-width: 1800px){
+    .homeContainer .contentContainer{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .homeContainer .firstContainer{
+        flex-direction: row;
+    }
+
+    .homeContainer .firstContainer,
+    .homeContainer .secondContainer{
+        align-items: center;
+        width: 80%;
+    }
+
+}
+
+@media (max-width: 1300px){
+    .homeContainer .firstContainer{
+        flex-direction: column;
+    }
+}

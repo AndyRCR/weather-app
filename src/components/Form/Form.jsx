@@ -111,17 +111,17 @@ const Form = () => {
             <MenuItem value={'Villa Maria del Triunfo'}>Villa Maria del Triunfo</MenuItem>
             <MenuItem value={'San Juan de Miraflores'}>San Juan de Miraflores</MenuItem>
           </Select>
-          <div style={{height: '100%', border: '1px solid #DBDBDB', marginTop: '8px'}}></div>
+          <div style={{height: '100%', marginTop: '8px'}}></div>
           <TextField className='formInput' id="inputNight" name='clouds' label="Clouds(%)" value={formValue.clouds} onChange={handleInputChange} variant="outlined" />
         </div>
         <div className='formItem'>
           <TextField className='formInput' id="inputDay" name='averageDay' label="Day temp. average" value={formValue.averageDay} onChange={handleInputChange} variant="outlined" />
-          <div style={{height: '100%', border: '1px solid #DBDBDB'}}></div>
+          <div style={{height: '100%'}}></div>
           <TextField className='formInput' id="inputDay" name='humidity' label="Humidity(%)" value={formValue.humidity} onChange={handleInputChange} variant="outlined" />
         </div>
         <div className='formItem'>
           <TextField className='formInput' style={{borderBottom: '0'}} id="inputDay" name='averageNight' label="Night temp. average" value={formValue.averageNight} onChange={handleInputChange} variant="outlined" />
-          <div style={{height: '100%', border: '1px solid #DBDBDB'}}></div>
+          <div style={{height: '100%'}}></div>
           <div className='formInput' style={{borderBottom: '0'}}>
             <LocalizationProvider dateAdapter={AdapterDateFns}>
               <DatePicker
