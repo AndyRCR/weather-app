@@ -2,7 +2,7 @@
   height: 100vh;
   padding: 20px;
   background: linear-gradient(to bottom, #2980b9, #6dd5fa, #ffffff);
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 h1{
@@ -98,7 +98,7 @@ h2{
 
 @media (max-width: 1800px){
     .app{
-		overflow: auto;
+		overflow-y: auto;
 	}
 }
 
