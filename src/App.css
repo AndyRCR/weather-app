@@ -2,7 +2,7 @@
   height: 100vh;
   padding: 20px;
   background: linear-gradient(to bottom, #2980b9, #6dd5fa, #ffffff);
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 h1{
